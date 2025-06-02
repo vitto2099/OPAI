@@ -16,7 +16,7 @@ const Hero = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-1000"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1920&q=80')`
@@ -24,7 +24,7 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-opai-darkGray/90 via-opai-darkGray/70 to-opai-darkGray/90"></div>
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text Content */}
@@ -39,11 +39,11 @@ const Hero = () => {
               Cada resgate é uma nova chance. Ajude a transformar histórias.
             </p>
             <p className="text-lg text-gray-400 max-w-lg">
-              Somos a OPAI - Anjos de Patas, uma ONG dedicada à proteção e resgate de animais 
+              Somos a OPAI - Anjos de Patas, uma ONG dedicada à proteção e resgate de animais
               em situação de risco em Itaiópolis/SC.
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <button
               onClick={handlePixDonation}
@@ -54,7 +54,7 @@ const Hero = () => {
                 <span>Doe via PIX</span>
               </span>
             </button>
-            
+
             <button
               onClick={scrollToHelp}
               className="bg-transparent border-2 border-opai-gold text-opai-gold hover:bg-opai-gold hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105"
@@ -63,25 +63,19 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Right Column - QR Code */}
         <div className="flex justify-center md:justify-end animate-scale-in">
           <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-opai-gold/20 max-w-sm">
             <div className="text-center space-y-4">
               <h3 className="text-opai-darkGray font-bold text-xl">Doe via PIX</h3>
-              
-              {/* QR Code Placeholder */}
-              <div className="w-48 h-48 bg-opai-darkGray mx-auto rounded-2xl flex items-center justify-center">
-                <div className="grid grid-cols-8 gap-1 p-4">
-                  {Array.from({length: 64}).map((_, i) => (
-                    <div 
-                      key={i}
-                      className={`w-2 h-2 ${Math.random() > 0.5 ? 'bg-white' : 'bg-opai-darkGray'} rounded-sm`}
-                    />
-                  ))}
-                </div>
-              </div>
-              
+
+              <img
+                src="/qrcode-pix.png"
+                alt="QR Code para doação via PIX"
+                className="w-48 h-48 mx-auto rounded-2xl border border-opai-darkGray/30 shadow-md"
+              />
+
               <div className="space-y-2">
                 <p className="text-opai-darkGray font-medium">Escaneie para doar</p>
                 <p className="text-sm text-gray-600 bg-gray-100 px-3 py-2 rounded-lg font-mono">
@@ -98,7 +92,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-opai-gold rounded-full flex justify-center">
