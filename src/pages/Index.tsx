@@ -10,12 +10,12 @@ import DonationButton from "@/components/DonationButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-opai-darkGray text-white font-montserrat">
       <Header />
       <Hero />
       <About />
-      <HowToHelp />
       <Rescues />
+      <HowToHelp />
       <Contact />
       <Footer />
       <DonationButton />
